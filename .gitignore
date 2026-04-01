@@ -1,4 +1,20 @@
 # Project exclude paths
 /.gradle/
-/app/build/
 /build/
+/app/build/
+*.iml
+.DS_Store
+*.log
+local.properties
+.kotlin/
+.idea/
+*.xcuserstate
+xcuserdata/
+*.pbxproj
+*.xcworkspace
+Pods/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.app.zip

@@ -1,0 +1,53 @@
+name: iosApp
+options:
+  bundleIdPrefix: com.bdqrgen
+  deploymentTarget:
+    iOS: "15.0"
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_IDENTITY: ""
+    CODE_SIGNING_REQUIRED: "NO"
+    CODE_SIGNING_ALLOWED: "NO"
+
+targets:
+  iosApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: iosApp
+        excludes:
+          - "Shared/**"
+    settings:
+      base:
+        INFOPLIST_FILE: iosApp/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.bdqrgen.iosapp
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+    info:
+      path: iosApp/Resources/Info.plist
+      properties:
+        CFBundleName: BD QR Generator
+        CFBundleDisplayName: BD QR Generator
+        CFBundleIdentifier: com.bdqrgen.iosapp
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "0.7.0"
+        CFBundlePackageType: APPL
+        CFBundleExecutable: iosApp
+        UILaunchStoryboardName: LaunchScreen
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSPhotoLibraryAddUsageDescription: "This app needs access to save QR codes to your photo library."
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations: {}
